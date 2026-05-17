@@ -50,16 +50,57 @@
     </nav>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden bg-dark/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 text-2xl font-bold animate-fade-in">
-        <a href="#home" class="mobile-link hover:text-accent transition-colors">Home</a>
-        <a href="#about" class="mobile-link hover:text-accent transition-colors">About</a>
-        <a href="#skills" class="mobile-link hover:text-accent transition-colors">Skills</a>
-        <a href="#projects" class="mobile-link hover:text-accent transition-colors">Projects</a>
-        <a href="#experience" class="mobile-link hover:text-accent transition-colors">Experience</a>
-        <a href="#contact" class="mobile-link hover:text-accent transition-colors">Contact</a>
-        <button id="menu-close" class="absolute top-8 right-8 text-slate-400 hover:text-accent transition-colors">
-            <i class="fa-solid fa-xmark text-3xl"></i>
-        </button>
+    <div id="mobile-menu" class="fixed inset-0 z-[100] hidden">
+        <!-- Backdrop -->
+        <div id="menu-backdrop" class="absolute inset-0 bg-dark/80 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+        
+        <!-- Menu Content -->
+        <div id="menu-content" class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-primary border-l border-slate-800 p-10 flex flex-col justify-between translate-x-full transition-transform duration-300 ease-out">
+            <div class="space-y-12">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-bold text-accent">Menu</span>
+                    <button id="menu-close" class="p-2 text-slate-400 hover:text-accent transition-colors">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+                </div>
+                
+                <nav class="flex flex-col space-y-6">
+                    <a href="#home" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4">
+                        <span class="text-xs text-slate-500 font-mono">01.</span> Home
+                    </a>
+                    <a href="#about" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4">
+                        <span class="text-xs text-slate-500 font-mono">02.</span> About
+                    </a>
+                    <a href="#skills" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4">
+                        <span class="text-xs text-slate-500 font-mono">03.</span> Skills
+                    </a>
+                    <a href="#projects" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4">
+                        <span class="text-xs text-slate-500 font-mono">04.</span> Projects
+                    </a>
+                    <a href="#experience" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4">
+                        <span class="text-xs text-slate-500 font-mono">05.</span> Experience
+                    </a>
+                    <a href="#contact" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4">
+                        <span class="text-xs text-slate-500 font-mono">06.</span> Contact
+                    </a>
+                </nav>
+            </div>
+
+            <div class="space-y-8">
+                <div class="space-y-4">
+                    <p class="text-xs uppercase tracking-widest text-slate-500 font-bold">Say Hello</p>
+                    <a href="mailto:ahmmsel3@gmail.com" class="text-light hover:text-accent transition-colors block text-lg">ahmmsel3@gmail.com</a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://github.com/ahmmsel" target="_blank" class="w-12 h-12 bg-dark rounded-xl flex items-center justify-center text-slate-400 hover:text-accent border border-slate-800 transition-all">
+                        <i class="fa-brands fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ali-hussein-aa12a322a/" target="_blank" class="w-12 h-12 bg-dark rounded-xl flex items-center justify-center text-slate-400 hover:text-accent border border-slate-800 transition-all">
+                        <i class="fa-brands fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Hero Section -->
