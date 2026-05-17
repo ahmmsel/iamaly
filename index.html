@@ -107,15 +107,15 @@
     <section id="home" class="min-h-screen flex flex-col items-center justify-center px-6 pt-28 text-center overflow-hidden">
         <div class="space-y-6 md:space-y-8 max-w-4xl flex flex-col items-center">
             <!-- Avatar -->
-            <div class="relative group mb-4">
-                <div class="absolute -inset-1 bg-gradient-to-r from-accent to-emerald-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <div class="relative group mb-8">
+                <div class="absolute -inset-1.5 bg-gradient-to-r from-accent to-blue-500 rounded-full blur opacity-40 group-hover:opacity-100 transition duration-500"></div>
                 <img src="src/assets/images/avatar.webp" alt="Ali Hussein" class="relative w-40 h-40 md:w-64 md:h-64 rounded-full object-cover border-4 border-primary shadow-2xl">
             </div>
             
             <div class="space-y-2 md:space-y-4">
-                <p class="text-accent font-medium tracking-[0.2em] uppercase text-xs md:text-sm">Software Engineer</p>
-                <h1 class="text-4xl md:text-7xl font-bold tracking-tight text-light">
-                    Ali Hussein
+                <p class="text-accent font-medium tracking-[0.3em] uppercase text-xs md:text-sm">Software Engineer</p>
+                <h1 class="text-5xl md:text-8xl font-bold tracking-tight text-light">
+                    Ali <span class="text-gradient">Hussein</span>
                 </h1>
             </div>
             
@@ -171,9 +171,9 @@
     <main class="max-w-5xl mx-auto px-6 space-y-24 pb-20 mt-10 md:mt-20">
         <!-- About Section -->
         <section id="about" class="scroll-mt-32">
-            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                <span class="w-8 h-1 bg-accent rounded-full"></span>
-                About Me
+            <h2 class="text-4xl font-bold mb-10 flex items-center gap-4">
+                <i class="fa-solid fa-user-ninja text-accent"></i>
+                About <span class="text-gradient">Me</span>
             </h2>
             <div class="grid md:grid-cols-5 gap-8">
                 <div class="md:col-span-3 space-y-6">
@@ -205,9 +205,9 @@
 
         <!-- Skills Section -->
         <section id="skills" class="scroll-mt-32">
-            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-                <span class="w-8 h-1 bg-accent rounded-full"></span>
-                Skills & Technologies
+            <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
+                <i class="fa-solid fa-code-branch text-accent"></i>
+                Skills & <span class="text-gradient">Technologies</span>
             </h2>
             
             <div class="space-y-12">
@@ -309,12 +309,59 @@
 
         <!-- Highlighted Projects Section -->
         <section id="projects" class="scroll-mt-32">
-            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-                <span class="w-8 h-1 bg-accent rounded-full"></span>
-                Highlighted Projects
+            <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
+                <i class="fa-solid fa-fire text-accent"></i>
+                Highlighted <span class="text-gradient">Projects</span>
             </h2>
             
             <div class="grid grid-cols-1 gap-12">
+                <!-- editly.studio -->
+                <div class="glass-card rounded-3xl overflow-hidden group border border-slate-700/50 hover:border-accent/30 transition-all duration-500">
+                    <div class="grid md:grid-cols-2">
+                        <!-- Project Image -->
+                        <div class="relative overflow-hidden h-64 md:h-full min-h-[300px]">
+                            <div class="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                            <img src="src/assets/images/editly-project.webp" alt="editly.studio AI Platform" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        
+                        <!-- Project Info -->
+                        <div class="p-8 md:p-12 flex flex-col justify-center space-y-6">
+                            <div class="flex items-center gap-2 text-accent font-mono text-sm uppercase tracking-wider">
+                                <i class="fa-solid fa-star"></i>
+                                <span>Featured Project</span>
+                            </div>
+                            <h3 class="text-3xl font-bold text-light group-hover:text-accent transition-colors">
+                                editly.studio
+                            </h3>
+                            <p class="text-lg text-slate-400 leading-relaxed">
+                                Maintaining and developing an <span class="text-slate-200">AI-powered platform</span> for a media studio. Implementing new features and <span class="text-slate-200">optimizing performance</span> for high-traffic media workflows and real-time processing.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-3 pt-2">
+                                <span class="flex items-center gap-2 px-4 py-2 bg-primary/50 rounded-xl text-sm text-slate-300 border border-slate-700 group-hover:border-accent/20 transition-all">
+                                    <i class="fa-solid fa-robot text-accent"></i>
+                                    AI Platform
+                                </span>
+                                <span class="flex items-center gap-2 px-4 py-2 bg-primary/50 rounded-xl text-sm text-slate-300 border border-slate-700 group-hover:border-accent/20 transition-all">
+                                    <i class="devicon-react-original text-accent"></i>
+                                    React.js
+                                </span>
+                                <span class="flex items-center gap-2 px-4 py-2 bg-primary/50 rounded-xl text-sm text-slate-300 border border-slate-700 group-hover:border-accent/20 transition-all">
+                                    <i class="devicon-nodejs-plain text-accent"></i>
+                                    Node.js
+                                </span>
+                            </div>
+                            
+                            <div class="pt-6">
+                                <a href="https://editly.studio" target="_blank" class="inline-flex items-center gap-2 text-light font-bold hover:text-accent transition-colors group/link">
+                                    View Live Project 
+                                    <i class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Cairo University Event Management System -->
                 <div class="glass-card rounded-3xl overflow-hidden group border border-slate-700/50 hover:border-accent/30 transition-all duration-500">
                     <div class="grid md:grid-cols-2">
@@ -366,9 +413,9 @@
 
         <!-- Experience Section -->
         <section id="experience" class="scroll-mt-32">
-            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-                <span class="w-8 h-1 bg-accent rounded-full"></span>
-                Professional Experience
+            <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
+                <i class="fa-solid fa-briefcase text-accent"></i>
+                Professional <span class="text-gradient">Experience</span>
             </h2>
             
             <div class="space-y-12">
@@ -576,9 +623,9 @@
 
         <!-- Education Section -->
         <section id="education" class="scroll-mt-32">
-            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-                <span class="w-8 h-1 bg-accent rounded-full"></span>
-                Education
+            <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
+                <i class="fa-solid fa-graduation-cap text-accent"></i>
+                Academic <span class="text-gradient">Background</span>
             </h2>
             <div class="glass-card p-8 rounded-3xl border-l-4 border-l-accent relative overflow-hidden group">
                 <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
@@ -607,9 +654,9 @@
 
         <!-- Contact Section -->
         <section id="contact" class="scroll-mt-32 pb-10">
-            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                <span class="w-8 h-1 bg-accent rounded-full"></span>
-                Get In Touch
+            <h2 class="text-4xl font-bold mb-10 flex items-center gap-4">
+                <i class="fa-solid fa-paper-plane text-accent"></i>
+                Get In <span class="text-gradient">Touch</span>
             </h2>
             <div class="grid md:grid-cols-5 gap-8">
                 <div class="md:col-span-3 glass-card p-8 md:p-12 rounded-3xl space-y-8">
