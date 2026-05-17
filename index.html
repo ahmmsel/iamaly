@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
         }
     </script>
 </head>
-<body class="antialiased lg:cursor-none">
+<body class="antialiased lg:cursor-none overflow-x-hidden">
     <!-- Custom Cursor (Visible only on Large screens) -->
     <div id="cursor" class="hidden lg:block fixed w-2 h-2 bg-accent rounded-full pointer-events-none z-[9999] mix-blend-difference transition-transform duration-100 ease-out translate-x-[-50%] translate-y-[-50%]"></div>
     <div id="cursor-follower" class="hidden lg:block fixed w-8 h-8 border border-accent rounded-full pointer-events-none z-[9998] transition-all duration-300 ease-out translate-x-[-50%] translate-y-[-50%]"></div>
@@ -104,7 +104,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex flex-col items-center justify-center px-6 pt-28 text-center overflow-hidden">
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 pt-28 text-center overflow-hidden">
         <div class="space-y-6 md:space-y-8 max-w-4xl flex flex-col items-center">
             <!-- Avatar -->
             <div class="relative group mb-8">
@@ -114,21 +114,21 @@
             
             <div class="space-y-2 md:space-y-4">
                 <p class="text-accent font-medium tracking-[0.3em] uppercase text-xs md:text-sm">Software Engineer</p>
-                <h1 class="text-5xl md:text-8xl font-bold tracking-tight text-light">
+                <h1 class="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight text-light">
                     Ali <span class="text-gradient">Hussein</span>
                 </h1>
             </div>
             
-            <p class="text-lg md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-base sm:text-lg md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
                 Proficient software engineer with deep understanding of both technical and business aspects. Building clean, scalable, and high-performance applications.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center pt-4">
-                <a href="#contact" class="btn-primary px-8 py-3 rounded-xl font-bold text-lg flex items-center justify-center gap-3">
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center pt-4 px-4 sm:px-0">
+                <a href="#contact" class="btn-primary px-8 py-3.5 rounded-xl font-bold text-lg flex items-center justify-center gap-3">
                     Let's Connect
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="#projects" class="border border-secondary hover:bg-secondary/30 transition-all px-8 py-3 rounded-xl font-bold text-lg">
+                <a href="#projects" class="border border-secondary hover:bg-secondary/30 transition-all px-8 py-3.5 rounded-xl font-bold text-lg flex items-center justify-center">
                     View My Work
                 </a>
             </div>
@@ -136,7 +136,7 @@
             <!-- Tech Stack Bar -->
             <div class="pt-8 space-y-4 w-full">
                 <p class="text-slate-500 text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold">Core Tech Stack</p>
-                <div class="flex flex-wrap justify-center gap-6 md:gap-10 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
                     <!-- React -->
                     <div class="flex items-center gap-2 group cursor-default" title="React">
                         <i class="devicon-react-original text-2xl md:text-3xl text-[#61DAFB] transition-transform group-hover:scale-110"></i>
@@ -168,10 +168,10 @@
     </section>
 
     <!-- Main Content Container -->
-    <main class="max-w-5xl mx-auto px-6 space-y-24 pb-20 mt-10 md:mt-20">
+    <main class="max-w-5xl mx-auto px-6 space-y-16 md:space-y-24 pb-20 mt-10 md:mt-20">
         <!-- About Section -->
         <section id="about" class="scroll-mt-32">
-            <h2 class="text-4xl font-bold mb-10 flex items-center gap-4">
+            <h2 class="text-xl sm:text-3xl md:text-4xl font-bold mb-10 flex flex-wrap items-center gap-2 sm:gap-4">
                 <i class="fa-solid fa-user-ninja text-accent"></i>
                 About <span class="text-gradient">Me</span>
             </h2>
@@ -205,7 +205,7 @@
 
         <!-- Skills Section -->
         <section id="skills" class="scroll-mt-32">
-            <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
+            <h2 class="text-xl sm:text-3xl md:text-4xl font-bold mb-10 flex flex-wrap items-center gap-2 sm:gap-4">
                 <i class="fa-solid fa-code-branch text-accent"></i>
                 Skills & <span class="text-gradient">Technologies</span>
             </h2>
@@ -217,7 +217,7 @@
                         <i class="fa-solid fa-terminal text-accent text-sm"></i>
                         Languages
                     </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                         <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
                             <i class="devicon-javascript-plain text-4xl text-[#F7DF1E] group-hover:scale-110 transition-transform"></i>
                             <span class="text-slate-200 font-medium text-center">Javascript</span>
@@ -247,7 +247,7 @@
                         <i class="fa-solid fa-layer-group text-accent text-sm"></i>
                         Frameworks & Libraries
                     </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                         <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
                             <i class="devicon-react-original text-4xl text-[#61DAFB] group-hover:scale-110 transition-transform"></i>
                             <span class="text-slate-200 font-medium text-center">React / Next.js</span>
@@ -277,7 +277,7 @@
                         <i class="fa-solid fa-screwdriver-wrench text-accent text-sm"></i>
                         Tools & Platforms
                     </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                         <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
                             <i class="devicon-docker-plain text-4xl text-[#2496ED] group-hover:scale-110 transition-transform"></i>
                             <span class="text-slate-200 font-medium text-center">Docker</span>
@@ -309,7 +309,7 @@
 
         <!-- Highlighted Projects Section -->
         <section id="projects" class="scroll-mt-32">
-            <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
+            <h2 class="text-xl sm:text-3xl md:text-4xl font-bold mb-10 flex flex-wrap items-center gap-2 sm:gap-4">
                 <i class="fa-solid fa-fire text-accent"></i>
                 Highlighted <span class="text-gradient">Projects</span>
             </h2>
@@ -330,7 +330,7 @@
                                 <i class="fa-solid fa-star"></i>
                                 <span>Featured Project</span>
                             </div>
-                            <h3 class="text-3xl font-bold text-light group-hover:text-accent transition-colors">
+                            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-light group-hover:text-accent transition-colors">
                                 editly.studio
                             </h3>
                             <p class="text-lg text-slate-400 leading-relaxed">
@@ -377,7 +377,7 @@
                                 <i class="fa-solid fa-star"></i>
                                 <span>Featured Project</span>
                             </div>
-                            <h3 class="text-3xl font-bold text-light group-hover:text-accent transition-colors">
+                            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-light group-hover:text-accent transition-colors">
                                 Cairo University Event Management System
                             </h3>
                             <p class="text-lg text-slate-400 leading-relaxed">
@@ -413,7 +413,7 @@
 
         <!-- Experience Section -->
         <section id="experience" class="scroll-mt-32">
-            <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
+            <h2 class="text-xl sm:text-3xl md:text-4xl font-bold mb-10 flex flex-wrap items-center gap-2 sm:gap-4">
                 <i class="fa-solid fa-briefcase text-accent"></i>
                 Professional <span class="text-gradient">Experience</span>
             </h2>
@@ -423,7 +423,7 @@
                 <div class="relative pl-8 border-l-2 border-slate-700 space-y-4">
                     <div class="absolute -left-2.5 top-0 w-5 h-5 bg-accent rounded-full border-4 border-dark"></div>
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                        <h3 class="text-2xl font-bold text-light">Full Stack Developer (Part-time)</h3>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-light">Full Stack Developer (Part-time)</h3>
                         <span class="text-accent font-mono">01/2026 - Present</span>
                     </div>
                     <p class="text-lg text-slate-300 font-medium">editly.studio</p>
@@ -461,7 +461,7 @@
                 <div class="relative pl-8 border-l-2 border-slate-700 space-y-4">
                     <div class="absolute -left-2.5 top-0 w-5 h-5 bg-slate-700 rounded-full border-4 border-dark"></div>
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                        <h3 class="text-2xl font-bold text-light">Full Stack Developer (Freelance)</h3>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-light">Full Stack Developer (Freelance)</h3>
                         <span class="text-accent font-mono">10/2022 - Present</span>
                     </div>
                     <p class="text-lg text-slate-300 font-medium">Self Employed</p>
@@ -507,7 +507,7 @@
                 <div class="relative pl-8 border-l-2 border-slate-700 space-y-4">
                     <div class="absolute -left-2.5 top-0 w-5 h-5 bg-accent rounded-full border-4 border-dark"></div>
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                        <h3 class="text-2xl font-bold text-light">Software Engineer</h3>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-light">Software Engineer</h3>
                         <span class="text-accent font-mono">01/2025 - 05/2025</span>
                     </div>
                     <p class="text-lg text-slate-300 font-medium">Bwomen Marketing • New Cairo</p>
@@ -549,7 +549,7 @@
                 <div class="relative pl-8 border-l-2 border-slate-700 space-y-4">
                     <div class="absolute -left-2.5 top-0 w-5 h-5 bg-slate-700 rounded-full border-4 border-dark"></div>
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                        <h3 class="text-2xl font-bold text-light">Software Engineer</h3>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-light">Software Engineer</h3>
                         <span class="text-accent font-mono">05/2024 - 12/2024</span>
                     </div>
                     <p class="text-lg text-slate-300 font-medium">PDF Help • Remote, Saudi Arabia</p>
@@ -583,7 +583,7 @@
                 <div class="relative pl-8 border-l-2 border-slate-700 space-y-4">
                     <div class="absolute -left-2.5 top-0 w-5 h-5 bg-slate-700 rounded-full border-4 border-dark"></div>
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                        <h3 class="text-2xl font-bold text-light">Frontend Developer</h3>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-light">Frontend Developer</h3>
                         <span class="text-accent font-mono">09/2023 - 11/2023</span>
                     </div>
                     <p class="text-lg text-slate-300 font-medium">Team Parallax • Remote, Germany</p>
@@ -623,7 +623,7 @@
 
         <!-- Education Section -->
         <section id="education" class="scroll-mt-32">
-            <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
+            <h2 class="text-xl sm:text-3xl md:text-4xl font-bold mb-10 flex flex-wrap items-center gap-2 sm:gap-4">
                 <i class="fa-solid fa-graduation-cap text-accent"></i>
                 Academic <span class="text-gradient">Background</span>
             </h2>
@@ -654,7 +654,7 @@
 
         <!-- Contact Section -->
         <section id="contact" class="scroll-mt-32 pb-10">
-            <h2 class="text-4xl font-bold mb-10 flex items-center gap-4">
+            <h2 class="text-xl sm:text-3xl md:text-4xl font-bold mb-10 flex flex-wrap items-center gap-2 sm:gap-4">
                 <i class="fa-solid fa-paper-plane text-accent"></i>
                 Get In <span class="text-gradient">Touch</span>
             </h2>
@@ -712,7 +712,7 @@
         <div class="max-w-5xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="md:col-span-2 space-y-6">
-                    <h3 class="text-2xl font-bold text-light">Ali Hussein</h3>
+                    <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-light">Ali Hussein</h3>
                     <p class="text-slate-400 max-w-sm">
                         Software Engineer dedicated to building high-performance applications with clean architecture and modern technologies.
                     </p>
