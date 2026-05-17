@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Hussein | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0F172A',
+                        light: '#F8FAFC',
+                        primary: '#1E293B',
+                        secondary: '#334155',
+                        accent: '#22C55E',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased cursor-none">
+    <!-- Custom Cursor -->
+    <div id="cursor" class="fixed w-2 h-2 bg-accent rounded-full pointer-events-none z-[9999] mix-blend-difference transition-transform duration-100 ease-out translate-x-[-50%] translate-y-[-50%]"></div>
+    <div id="cursor-follower" class="fixed w-8 h-8 border border-accent rounded-full pointer-events-none z-[9998] transition-all duration-300 ease-out translate-x-[-50%] translate-y-[-50%]"></div>
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 z-50 flex justify-center">
+        <div class="glass-card px-6 py-3 rounded-full flex gap-8 items-center">
+            <a href="#home" class="hover:text-accent transition-colors">Home</a>
+            <a href="#about" class="hover:text-accent transition-colors">About</a>
+            <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
+            <a href="#experience" class="hover:text-accent transition-colors">Experience</a>
+            <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center px-4 pt-28 text-center">
+        <div class="space-y-6 max-w-4xl flex flex-col items-center">
+            <!-- Avatar -->
+            <div class="relative group mb-4">
+                <div class="absolute -inset-1 bg-gradient-to-r from-accent to-emerald-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <img src="src/assets/images/avatar.webp" alt="Ali Hussein" class="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-primary shadow-2xl">
+            </div>
+            
+            <p class="text-accent font-medium tracking-widest uppercase">Software Engineer</p>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
+                Ali Hussein
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Proficient software engineer with deep understanding of both technical and business aspects. Building clean, scalable, and high-performance applications.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <a href="#contact" class="btn-primary px-8 py-3 rounded-lg font-semibold text-lg flex items-center justify-center gap-2">
+                    Let's Connect
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#experience" class="border border-secondary hover:bg-secondary/30 transition-all px-8 py-3 rounded-lg font-semibold text-lg">
+                    View My Work
+                </a>
+            </div>
+            <!-- Tech Stack Bar -->
+            <div class="pt-16 space-y-4">
+                <p class="text-slate-500 text-xs uppercase tracking-[0.2em] font-bold">Core Tech Stack</p>
+                <div class="flex flex-wrap justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                    <!-- React -->
+                    <div class="flex items-center gap-2 group cursor-default" title="React">
+                        <i class="devicon-react-original text-3xl text-[#61DAFB] transition-transform group-hover:scale-110"></i>
+                        <span class="text-sm font-medium text-slate-300 group-hover:text-light transition-colors">React</span>
+                    </div>
+                    <!-- Next.js -->
+                    <div class="flex items-center gap-2 group cursor-default" title="Next.js">
+                        <i class="devicon-nextjs-plain text-3xl text-light transition-transform group-hover:scale-110"></i>
+                        <span class="text-sm font-medium text-slate-300 group-hover:text-light transition-colors">Next.js</span>
+                    </div>
+                    <!-- Laravel -->
+                    <div class="flex items-center gap-2 group cursor-default" title="Laravel">
+                        <i class="devicon-laravel-original text-3xl text-[#FF2D20] transition-transform group-hover:scale-110"></i>
+                        <span class="text-sm font-medium text-slate-300 group-hover:text-light transition-colors">Laravel</span>
+                    </div>
+                    <!-- Node.js -->
+                    <div class="flex items-center gap-2 group cursor-default" title="Node.js">
+                        <i class="devicon-nodejs-plain text-3xl text-[#339933] transition-transform group-hover:scale-110"></i>
+                        <span class="text-sm font-medium text-slate-300 group-hover:text-light transition-colors">Node.js</span>
+                    </div>
+                    <!-- Tailwind -->
+                    <div class="flex items-center gap-2 group cursor-default" title="Tailwind CSS">
+                        <i class="devicon-tailwindcss-original text-3xl text-[#06B6D4] transition-transform group-hover:scale-110"></i>
+                        <span class="text-sm font-medium text-slate-300 group-hover:text-light transition-colors">Tailwind</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 text-slate-500 text-sm flex justify-center gap-6">
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Cairo, Egypt
+                </span>
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    ahmmsel3@gmail.com
+                </span>
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    +20 1095041883
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-6 space-y-20 pb-20">
+        <!-- About Section -->
+        <section id="about" class="scroll-mt-32">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                <span class="w-8 h-1 bg-accent rounded-full"></span>
+                About Me
+            </h2>
+            <div class="grid md:grid-cols-5 gap-8">
+                <div class="md:col-span-3 space-y-6">
+                    <p class="text-xl leading-relaxed text-slate-300">
+                        I am a <span class="text-light font-semibold">Software Engineer</span> with a passion for building robust, scalable, and user-centric applications. With a strong foundation in both frontend and backend technologies, I bridge the gap between complex technical requirements and elegant business solutions.
+                    </p>
+                    <p class="text-lg leading-relaxed text-slate-400">
+                        My approach focuses on <span class="text-accent">clean code architecture</span> and <span class="text-accent">performance optimization</span>. I thrive in collaborative environments, constantly learning and adapting to the latest industry standards to deliver high-quality software that stands the test of time.
+                    </p>
+                </div>
+                <div class="md:col-span-2 grid grid-cols-1 gap-4">
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-accent flex items-start gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-bolt text-accent text-xl"></i></div>
+                        <div>
+                            <h4 class="text-light font-bold">Fast Performance</h4>
+                            <p class="text-sm text-slate-400">Optimizing every millisecond for seamless user experiences.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-accent flex items-start gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-shield-halved text-accent text-xl"></i></div>
+                        <div>
+                            <h4 class="text-light font-bold">Secure by Design</h4>
+                            <p class="text-sm text-slate-400">Implementing industry-standard security protocols across the stack.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="scroll-mt-32">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="w-8 h-1 bg-accent rounded-full"></span>
+                Skills & Technologies
+            </h2>
+            
+            <div class="space-y-12">
+                <!-- Languages -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-terminal text-accent text-sm"></i>
+                        Languages
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-javascript-plain text-4xl text-[#F7DF1E] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">Javascript</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-typescript-plain text-4xl text-[#3178C6] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">Typescript</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-python-plain text-4xl text-[#3776AB] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">Python</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-php-plain text-4xl text-[#777BB4] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">PHP</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-cplusplus-plain text-4xl text-[#00599C] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">C++</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Libraries -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-accent text-sm"></i>
+                        Frameworks & Libraries
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-react-original text-4xl text-[#61DAFB] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">React / Next.js</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-laravel-original text-4xl text-[#FF2D20] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">Laravel</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-nodejs-plain text-4xl text-[#339933] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">Node.js</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-astro-plain text-4xl text-light group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">Astro</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-tailwindcss-original text-4xl text-[#06B6D4] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-screwdriver-wrench text-accent text-sm"></i>
+                        Tools & Platforms
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-docker-plain text-4xl text-[#2496ED] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">Docker</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-figma-plain text-4xl text-[#F24E1E] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">Figma</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="fa-solid fa-palette text-3xl text-accent group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">UI/UX Design</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-mysql-plain text-4xl text-[#4479A1] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">Databases</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-linux-plain text-4xl text-light group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">Linux</span>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:border-accent/50 transition-all cursor-default group">
+                            <i class="devicon-wordpress-plain text-4xl text-[#21759B] group-hover:scale-110 transition-transform"></i>
+                            <span class="text-slate-200 font-medium text-center">WordPress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlighted Projects Section -->
+        <section id="projects" class="scroll-mt-32">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="w-8 h-1 bg-accent rounded-full"></span>
+                Highlighted Projects
+            </h2>
+            
+            <div class="grid grid-cols-1 gap-12">
+                <!-- Cairo University Event Management System -->
+                <div class="glass-card rounded-3xl overflow-hidden group border border-slate-700/50 hover:border-accent/30 transition-all duration-500">
+                    <div class="grid md:grid-cols-2">
+                        <!-- Project Image -->
+                        <div class="relative overflow-hidden h-64 md:h-full min-h-[300px]">
+                            <div class="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                            <img src="src/assets/images/cuef-project.webp" alt="Cairo University Event Management System" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        
+                        <!-- Project Info -->
+                        <div class="p-8 md:p-12 flex flex-col justify-center space-y-6">
+                            <div class="flex items-center gap-2 text-accent font-mono text-sm uppercase tracking-wider">
+                                <i class="fa-solid fa-star"></i>
+                                <span>Featured Project</span>
+                            </div>
+                            <h3 class="text-3xl font-bold text-light group-hover:text-accent transition-colors">
+                                Cairo University Event Management System
+                            </h3>
+                            <p class="text-lg text-slate-400 leading-relaxed">
+                                A comprehensive system designed to handle large-scale event logistics. Engineered to manage <span class="text-slate-200">registrations</span> and <span class="text-slate-200">volunteer workflows</span>, while automating the distribution of thousands of personalized check-in <span class="text-slate-200">QR codes via email</span>.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-3 pt-2">
+                                <span class="flex items-center gap-2 px-4 py-2 bg-primary/50 rounded-xl text-sm text-slate-300 border border-slate-700 group-hover:border-accent/20 transition-all">
+                                    <i class="devicon-laravel-original text-accent"></i>
+                                    Laravel
+                                </span>
+                                <span class="flex items-center gap-2 px-4 py-2 bg-primary/50 rounded-xl text-sm text-slate-300 border border-slate-700 group-hover:border-accent/20 transition-all">
+                                    <i class="fa-solid fa-qrcode text-accent"></i>
+                                    QR System
+                                </span>
+                                <span class="flex items-center gap-2 px-4 py-2 bg-primary/50 rounded-xl text-sm text-slate-300 border border-slate-700 group-hover:border-accent/20 transition-all">
+                                    <i class="fa-solid fa-paper-plane text-accent"></i>
+                                    Mass Mailer
+                                </span>
+                            </div>
+                            
+                            <div class="pt-6">
+                                <a href="https://cuef.nasbee-eg.com" target="_blank" class="inline-flex items-center gap-2 text-light font-bold hover:text-accent transition-colors group/link">
+                                    View Project Details 
+                                    <i class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="scroll-mt-32">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="w-8 h-1 bg-accent rounded-full"></span>
+                Professional Experience
+            </h2>
+            
+            <div class="space-y-12">
+                <!-- editly.studio -->
+                <div class="relative pl-8 border-l-2 border-slate-700 space-y-4">
+                    <div class="absolute -left-2.5 top-0 w-5 h-5 bg-accent rounded-full border-4 border-dark"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-2xl font-bold text-light">Full Stack Developer (Part-time)</h3>
+                        <span class="text-accent font-mono">01/2026 - Present</span>
+                    </div>
+                    <p class="text-lg text-slate-300 font-medium">editly.studio</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="fa-solid fa-robot text-accent"></i>
+                            AI Platform
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="fa-solid fa-video text-accent"></i>
+                            Media Studio
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="devicon-react-original text-accent"></i>
+                            React.js
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="devicon-nodejs-plain text-accent"></i>
+                            Node.js
+                        </span>
+                    </div>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Maintain and develop an AI-powered platform for a media studio.
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Implement new features and optimize performance for high-traffic media workflows.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Self Employed -->
+                <div class="relative pl-8 border-l-2 border-slate-700 space-y-4">
+                    <div class="absolute -left-2.5 top-0 w-5 h-5 bg-slate-700 rounded-full border-4 border-dark"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-2xl font-bold text-light">Full Stack Developer (Freelance)</h3>
+                        <span class="text-accent font-mono">10/2022 - Present</span>
+                    </div>
+                    <p class="text-lg text-slate-300 font-medium">Self Employed</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="devicon-nodejs-plain text-accent"></i>
+                            Node.js
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="fa-solid fa-server text-accent"></i>
+                            Scalable Backend
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="fa-solid fa-gears text-accent"></i>
+                            RESTful APIs
+                        </span>
+                    </div>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Designed and implemented scalable backend systems using Node.js for web and business applications.
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Built RESTful APIs to handle authentication, business logic, and data processing.
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Integrated Node.js backends with frontend applications and third-party services.
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Applied best practices in code structure, error handling, and security.
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Optimized backend performance and ensured reliability for production environments.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bwomen Marketing -->
+                <div class="relative pl-8 border-l-2 border-slate-700 space-y-4">
+                    <div class="absolute -left-2.5 top-0 w-5 h-5 bg-accent rounded-full border-4 border-dark"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-2xl font-bold text-light">Software Engineer</h3>
+                        <span class="text-accent font-mono">01/2025 - 05/2025</span>
+                    </div>
+                    <p class="text-lg text-slate-300 font-medium">Bwomen Marketing • New Cairo</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="devicon-wordpress-plain text-accent"></i>
+                            WordPress
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="devicon-woocommerce-plain text-accent"></i>
+                            WooCommerce
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="devicon-react-original text-accent"></i>
+                            React.js
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="devicon-nextjs-original text-accent"></i>
+                            Next.js
+                        </span>
+                    </div>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Design and implement full-stack web applications, integrating WordPress and WooCommerce with React.js and Next.js.
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Deploy and manage applications on VPS servers, ensuring performance and security optimizations using CyberPanel.
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Collaborate with cross-functional teams to develop scalable and high-performance web solutions.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PDF Help -->
+                <div class="relative pl-8 border-l-2 border-slate-700 space-y-4">
+                    <div class="absolute -left-2.5 top-0 w-5 h-5 bg-slate-700 rounded-full border-4 border-dark"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-2xl font-bold text-light">Software Engineer</h3>
+                        <span class="text-accent font-mono">05/2024 - 12/2024</span>
+                    </div>
+                    <p class="text-lg text-slate-300 font-medium">PDF Help • Remote, Saudi Arabia</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="devicon-react-original text-accent"></i>
+                            React.js
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="devicon-docker-plain text-accent"></i>
+                            Docker
+                        </span>
+                    </div>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Working on a popular platform serving thousands of users per month with PDF tools.
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Developed new features using React.js and improved website performance through optimization techniques.
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Utilized Docker for deployment processes.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Team Parallax -->
+                <div class="relative pl-8 border-l-2 border-slate-700 space-y-4">
+                    <div class="absolute -left-2.5 top-0 w-5 h-5 bg-slate-700 rounded-full border-4 border-dark"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-2xl font-bold text-light">Frontend Developer</h3>
+                        <span class="text-accent font-mono">09/2023 - 11/2023</span>
+                    </div>
+                    <p class="text-lg text-slate-300 font-medium">Team Parallax • Remote, Germany</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="devicon-git-plain text-accent"></i>
+                            Git
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="devicon-storybook-plain text-accent"></i>
+                            Storybook
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 bg-primary/50 rounded-full text-xs text-slate-300 border border-slate-700">
+                            <i class="devicon-react-original text-accent"></i>
+                            React.js
+                        </span>
+                    </div>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Collaborated with team members using Git and GitLab for version control.
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Wrote tests and utilized Storybook in React.js.
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-chevron-right text-[10px] mt-1.5 text-accent"></i>
+                            Followed ESLint and Prettier rules for high code quality and clean, reusable components.
+                        </li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="scroll-mt-32">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="w-8 h-1 bg-accent rounded-full"></span>
+                Education
+            </h2>
+            <div class="glass-card p-8 rounded-3xl border-l-4 border-l-accent relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-graduation-cap text-9xl"></i>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between gap-6 relative z-10">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2 text-accent font-mono">
+                            <i class="fa-solid fa-calendar-days text-sm"></i>
+                            <span>2025 - 2029 (Expected)</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-light">B.Sc. in Computer Science</h3>
+                        <p class="text-xl text-slate-300 flex items-center gap-2">
+                            <i class="fa-solid fa-university text-accent text-lg"></i>
+                            New Cairo Academy
+                        </p>
+                        <div class="pt-4 flex flex-wrap gap-3">
+                            <span class="px-3 py-1 bg-primary/40 rounded-full text-xs text-slate-300 border border-slate-700">Algorithms</span>
+                            <span class="px-3 py-1 bg-primary/40 rounded-full text-xs text-slate-300 border border-slate-700">Data Structures</span>
+                            <span class="px-3 py-1 bg-primary/40 rounded-full text-xs text-slate-300 border border-slate-700">System Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="scroll-mt-32 pb-10">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                <span class="w-8 h-1 bg-accent rounded-full"></span>
+                Get In Touch
+            </h2>
+            <div class="grid md:grid-cols-5 gap-8">
+                <div class="md:col-span-3 glass-card p-8 md:p-12 rounded-3xl space-y-8">
+                    <h3 class="text-4xl font-bold leading-tight text-light">Ready to build something <span class="text-accent underline decoration-2 underline-offset-8">extraordinary</span>?</h3>
+                    <p class="text-xl text-slate-400">
+                        I'm currently available for new opportunities and collaborations. Whether you have a specific project in mind or just want to discuss technical possibilities, I'm always open to connecting.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="mailto:ahmmsel3@gmail.com" class="btn-primary px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-3">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Send Message
+                        </a>
+                        <a href="https://www.linkedin.com/in/ali-hussein-aa12a322a/" target="_blank" class="border border-secondary hover:bg-secondary/30 transition-all px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-3">
+                            <i class="fa-brands fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-2 flex flex-col gap-4">
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-6 group hover:border-accent/50 transition-all">
+                        <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-accent text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Email Me</p>
+                            <a href="mailto:ahmmsel3@gmail.com" class="text-light font-medium hover:text-accent transition-colors">ahmmsel3@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-6 group hover:border-accent/50 transition-all">
+                        <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-accent text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Call Me</p>
+                            <a href="tel:+201095041883" class="text-light font-medium hover:text-accent transition-colors">+20 1095041883</a>
+                        </div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-6 group hover:border-accent/50 transition-all">
+                        <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-accent text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Location</p>
+                            <p class="text-light font-medium">Cairo, Egypt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary/30 border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2 space-y-6">
+                    <h3 class="text-2xl font-bold text-light">Ali Hussein</h3>
+                    <p class="text-slate-400 max-w-sm">
+                        Software Engineer dedicated to building high-performance applications with clean architecture and modern technologies.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/ahmmsel" target="_blank" class="w-10 h-12 bg-primary rounded-lg flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent/50 border border-transparent transition-all">
+                            <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ali-hussein-aa12a322a/" target="_blank" class="w-10 h-12 bg-primary rounded-lg flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent/50 border border-transparent transition-all">
+                            <i class="fa-brands fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="mailto:ahmmsel3@gmail.com" class="w-10 h-12 bg-primary rounded-lg flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent/50 border border-transparent transition-all">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-light font-bold mb-6 uppercase tracking-wider text-sm">Navigation</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#home" class="text-slate-400 hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-slate-400 hover:text-accent transition-colors">About</a></li>
+                        <li><a href="#skills" class="text-slate-400 hover:text-accent transition-colors">Skills</a></li>
+                        <li><a href="#experience" class="text-slate-400 hover:text-accent transition-colors">Experience</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-light font-bold mb-6 uppercase tracking-wider text-sm">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="text-slate-400 flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-accent"></i>
+                            Cairo, Egypt
+                        </li>
+                        <li>
+                            <a href="tel:+201095041883" class="text-slate-400 hover:text-accent transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-phone text-accent"></i>
+                                +20 1095041883
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:ahmmsel3@gmail.com" class="text-slate-400 hover:text-accent transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-envelope text-accent"></i>
+                                Email Me
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+                <p>&copy; 2026 Ali Hussein. Built with clean code & performance in mind.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Custom Mouse Cursor Effect
+        const cursor = document.getElementById('cursor');
+        const follower = document.getElementById('cursor-follower');
+        
+        document.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            
+            cursor.style.left = posX + 'px';
+            cursor.style.top = posY + 'px';
+            
+            // Smoother follower effect
+            follower.animate({
+                left: posX + 'px',
+                top: posY + 'px'
+            }, { duration: 500, fill: "forwards" });
+        });
+
+        // Hover effect for interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, .glass-card, .group, [title]');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('scale-[3]');
+                follower.classList.add('scale-[1.5]', 'bg-accent/10');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('scale-[3]');
+                follower.classList.remove('scale-[1.5]', 'bg-accent/10');
+            });
+        });
+
+        // Smooth scroll adjustment for floating nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
