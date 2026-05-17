@@ -50,38 +50,38 @@
     </nav>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 z-[100] hidden">
+    <div id="mobile-menu" class="fixed inset-0 z-[100] invisible transition-all duration-300">
         <!-- Backdrop -->
-        <div id="menu-backdrop" class="absolute inset-0 bg-dark/80 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+        <div id="menu-backdrop" class="absolute inset-0 bg-dark/80 backdrop-blur-sm opacity-0 transition-opacity duration-300 cursor-pointer"></div>
         
         <!-- Menu Content -->
-        <div id="menu-content" class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-primary border-l border-slate-800 p-10 flex flex-col justify-between translate-x-full transition-transform duration-300 ease-out">
+        <div id="menu-content" class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-primary border-l border-slate-800 p-10 flex flex-col justify-between translate-x-full transition-transform duration-300 ease-out z-10 shadow-2xl">
             <div class="space-y-12">
                 <div class="flex justify-between items-center">
                     <span class="text-2xl font-bold text-accent">Menu</span>
-                    <button id="menu-close" class="p-2 text-slate-400 hover:text-accent transition-colors">
+                    <button id="menu-close" class="p-2 text-slate-400 hover:text-accent transition-colors flex items-center justify-center">
                         <i class="fa-solid fa-xmark text-2xl"></i>
                     </button>
                 </div>
                 
                 <nav class="flex flex-col space-y-6">
-                    <a href="#home" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4">
-                        <span class="text-xs text-slate-500 font-mono">01.</span> Home
+                    <a href="#home" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4 group/m">
+                        <span class="text-xs text-slate-500 font-mono group-hover/m:text-accent">01.</span> Home
                     </a>
-                    <a href="#about" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4">
-                        <span class="text-xs text-slate-500 font-mono">02.</span> About
+                    <a href="#about" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4 group/m">
+                        <span class="text-xs text-slate-500 font-mono group-hover/m:text-accent">02.</span> About
                     </a>
-                    <a href="#skills" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4">
-                        <span class="text-xs text-slate-500 font-mono">03.</span> Skills
+                    <a href="#skills" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4 group/m">
+                        <span class="text-xs text-slate-500 font-mono group-hover/m:text-accent">03.</span> Skills
                     </a>
-                    <a href="#projects" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4">
-                        <span class="text-xs text-slate-500 font-mono">04.</span> Projects
+                    <a href="#projects" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4 group/m">
+                        <span class="text-xs text-slate-500 font-mono group-hover/m:text-accent">04.</span> Projects
                     </a>
-                    <a href="#experience" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4">
-                        <span class="text-xs text-slate-500 font-mono">05.</span> Experience
+                    <a href="#experience" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4 group/m">
+                        <span class="text-xs text-slate-500 font-mono group-hover/m:text-accent">05.</span> Experience
                     </a>
-                    <a href="#contact" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4">
-                        <span class="text-xs text-slate-500 font-mono">06.</span> Contact
+                    <a href="#contact" class="mobile-link text-3xl font-bold text-light hover:text-accent transition-all flex items-center gap-4 group/m">
+                        <span class="text-xs text-slate-500 font-mono group-hover/m:text-accent">06.</span> Contact
                     </a>
                 </nav>
             </div>
@@ -727,17 +727,32 @@
         const menuToggle = document.getElementById('menu-toggle');
         const menuClose = document.getElementById('menu-close');
         const mobileMenu = document.getElementById('mobile-menu');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const menuContent = document.getElementById('menu-content');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        const toggleMenu = () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-            document.body.classList.toggle('overflow-hidden');
+        const openMenu = () => {
+            mobileMenu.classList.remove('invisible');
+            mobileMenu.classList.add('visible');
+            menuBackdrop.classList.add('opacity-100');
+            menuContent.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
         };
 
-        menuToggle.addEventListener('click', toggleMenu);
-        menuClose.addEventListener('click', toggleMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+        const closeMenu = () => {
+            menuBackdrop.classList.remove('opacity-100');
+            menuContent.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.remove('visible');
+                mobileMenu.classList.add('invisible');
+                document.body.style.overflow = '';
+            }, 300);
+        };
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
         
         // Only run cursor logic on desktop
         if (window.innerWidth >= 1024) {
